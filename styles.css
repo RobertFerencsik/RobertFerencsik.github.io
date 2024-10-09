@@ -1,0 +1,26 @@
+.flex-parent {
+  display: flex;
+}
+
+.flex-child {
+  min-width: 300px;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+a {
+  text-decoration: none;
+  color: #873d2c;
+}
+
+a:hover {
+  color: #642e21;
+}	
+
+h2 {
+ 
+}
+
+h3 {
+
+}
