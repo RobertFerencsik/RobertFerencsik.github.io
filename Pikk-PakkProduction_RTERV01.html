@@ -1,4 +1,3 @@
-
 <!DOCTYPE html PUBLIC>
 <html style="direction: ltr;">
 <head>
@@ -278,7 +277,6 @@ Bevezet&eacute;s</a></p>
 
 <p><a href="https://users.iit.uni-miskolc.hu/%7Emileff/szt/Rendszertervezes.html#_Toc130874266">2.
 Felhaszn&aacute;l&oacute;i fel&uuml;let</a></p>
-
 <p><a href="https://users.iit.uni-miskolc.hu/%7Emileff/szt/Rendszertervezes.html#_Toc130874267">3.
 Adatmodellek</a></p>
 
@@ -310,6 +308,101 @@ Bevezet&eacute;s</h1>
 
 <h1><a name="_Toc101183569"></a><a name="_Toc130874266"></a>2.
 Felhaszn&aacute;l&oacute;i fel&uuml;let</h1>
+
+<h2>2. Felhasználói felület</h2>
+
+<h3>Első bejelentkezés</h3>
+
+
+<h4>Képernyő 1: Pikk-Pakk Produktion</h4>
+<h5>Oldalcím: Első Bejelentkezés</h5>
+<div style="text-align: center; margin: 20px auto;">
+  <label for="username">Felhasználónév:</label><br>
+  <input type="text" id="username" placeholder="Bank által generált felhasználónév"><br><br>
+
+  <label for="password">Jelszó:</label><br>
+  <input type="password" id="password" placeholder="Bank által generált jelszó"><br><br>
+
+  <button>Bejelentkezés</button><br><br>
+
+  <a href="#" style="font-size: small;">Segítségre van szüksége? Vegye fel a kapcsolatot az ügyfélszolgálattal.</a>
+</div>
+
+<h4>Képernyő 2: Jelszó megváltoztatása</h4>
+<h5>Oldalcím: Új Jelszó Beállítása</h5>
+<div style="max-width: 300px; margin: 20px auto;">
+  <label for="new-password">Új jelszó:</label><br>
+  <input type="password" id="new-password" placeholder="Adja meg az új jelszavát"><br><br>
+
+  <label for="confirm-password">Jelszó megerősítése:</label><br>
+  <input type="password" id="confirm-password" placeholder="Ismételje meg az új jelszót"><br><br>
+
+  <button style="display: block; margin: 0 auto;">Mentés</button>
+</div>
+
+<h4>Képernyő 3: Kétlépcsős azonosítás aktiválása</h4>
+<h5>Oldalcím: Kétlépcsős Azonosítás</h5>
+<div style="max-width: 300px; margin: 20px auto;">
+  <p>A kétlépcsős azonosítás további biztonságot nyújt. Adja meg az e-mailben és SMS-ben kapott kódot.</p>
+
+  <label for="code">Kód:</label><br>
+  <input type="text" id="code" placeholder="Írja be a kódot"><br><br>
+
+  <button style="display: block; margin: 0 auto;">Aktiválás</button>
+</div>
+
+<h3>Általános bejelentkezés</h3>
+
+<h4>Képernyő 1: Bejelentkezés</h4>
+<h5>Oldalcím: Bejelentkezés</h5>
+<div style="text-align: center; margin: 20px auto;">
+  <label for="general-username">Felhasználónév:</label><br>
+  <input type="text" id="general-username" placeholder="Adja meg a felhasználónevét"><br><br>
+
+  <label for="general-password">Jelszó:</label><br>
+  <input type="password" id="general-password" placeholder="Adja meg a jelszavát"><br><br>
+
+  <button>Bejelentkezés</button><br><br>
+
+  <a href="#" style="font-size: small;">Elfelejtette a jelszavát?</a>
+</div>
+
+
+<h4>Képernyő 2: Kétlépcsős azonosítás</h4>
+<h5>Oldalcím: Kétlépcsős Azonosítás</h5>
+<div style="max-width: 300px; margin: 20px auto;">
+  <p>Az SMS-ben kapott kódot írja be.</p>
+
+  <label for="sms-code">Kód:</label><br>
+  <input type="text" id="sms-code" placeholder="SMS-kód"><br><br>
+
+  <button style="display: block; margin: 0 auto;">Hitelesítés</button>
+</div>
+
+<h3>Dolgozó</h3>
+
+<h4>Képernyő 1: Fiók létrehozása</h4>
+<h5>Oldalcím: Új Fiók Létrehozása</h5>
+<div style="text-align: center; margin: 20px auto;">
+  <button style="font-size: larger;">Fiók létrehozása</button>
+</div>
+
+<h4>Képernyő 2: Dolgozói adatok</h4>
+<h5>Oldalcím: Dolgozói Adatok Megadása</h5>
+<div style="max-width: 300px; margin: 20px auto;">
+  <label for="employee-name">Név:</label><br>
+  <input type="text" id="employee-name" placeholder="Adja meg a dolgozó nevét"><br><br>
+
+  <label for="employee-email">E-mail:</label><br>
+  <input type="email" id="employee-email" placeholder="Adja meg az e-mail címet"><br><br>
+
+  <label for="employee-position">Beosztás:</label><br>
+  <select id="employee-position">
+    <option>Válassza ki a beosztást</option>
+  </select><br><br>
+
+  <button style="display: block; margin: 0 auto;">Tovább</button>
+</div>
 
 <p>&nbsp;</p>
 
