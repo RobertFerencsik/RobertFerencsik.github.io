@@ -2394,8 +2394,7 @@ Attrib&uacute;tumok:<br>
 
   <li>Address: Lakc&iacute;m</li>
 
-  <li>Attrib&uacute;tumok:</li>
-
+  
   <li>EmploymentStartDate: Munk&aacute;ba &aacute;ll&aacute;s d&aacute;tuma</li>
 
   <li>PwHash: Jelsz&oacute; hash k&oacute;dja </li>
@@ -2426,8 +2425,7 @@ Attrib&uacute;tumok:<br>
 
   <li>Address: Lakc&iacute;m</li>
 
-  <li>Attrib&uacute;tumok:</li>
-
+  
   <li>SSN: T&aacute;rsadalom biztos&iacute;t&aacute;si sz&aacute;m</li>
 
   <li>PwHash: Jelsz&oacute; hash k&oacute;dja</li>
@@ -2497,7 +2495,7 @@ Attrib&uacute;tumok:<br>
 <span style="font-weight: bold;">&Uacute;j fi&oacute;k regisztr&aacute;l&aacute;sa (&Uuml;gyf&eacute;l)<br>
 <img style="width: 669px; height: 499px;" alt="registration" src="img/useCaseUserRegistration.png"><br>
 <br>
-<img style="width: 611px; height: 130px;" alt="Statediagram" src="img/stateDiagramUserRegistration.png"><br>
+<img style="width: 641px; height: 136px;" alt="Statediagram" src="img/stateDiagramUserRegistration.png"><br>
 </span>
 <br>
 
@@ -2517,23 +2515,37 @@ Attrib&uacute;tumok:<br>
 
 
 
-<p>Egy &ndash; egy alpontban dokument&aacute;ljuk
-le&iacute;r&aacute;ssal vagy a sz&uuml;ks&eacute;ges
-diagrammokkal a rendszerben zajl&oacute; legfontosabb
-feldolgoz&aacute;si
-l&eacute;p&eacute;seket, az egyes
-tev&eacute;kenys&eacute;gek
-k&ouml;z&ouml;tt sz&uuml;ks&eacute;ges adat
-&aacute;raml&aacute;sokat.</p>
+<p>A funkcion&aacute;lis modell a rendszerben zajl&oacute;
+feldolgoz&aacute;si l&eacute;p&eacute;seket &eacute;s az
+adat&aacute;raml&aacute;sokat mutatja be. Az al&aacute;bbiakban
+&ouml;sszefoglaljuk a legfontosabb folyamatokat.<br>
+<br>
+<br>
+<span style="font-weight: bold;">Szem&eacute;lyes Adatok M&oacute;dos&iacute;t&aacute;sa</span><br>
+Le&iacute;r&aacute;s: Az &uuml;gyf&eacute;l m&oacute;dos&iacute;tja a
+szem&eacute;lyes adatait, amelyek ellenőrz&eacute;s ut&aacute;n
+friss&uuml;lnek az adatb&aacute;zisban.<br>
+<br>
+Adat&aacute;raml&aacute;s: A m&oacute;dos&iacute;tott adatok
+friss&iacute;t&eacute;se a ClientRepository-ban t&ouml;rt&eacute;nik,
+&eacute;s a rendszer &eacute;rtes&iacute;ti az &uuml;gyfelet a
+v&aacute;ltoz&aacute;sokr&oacute;l.<br>
+<br style="font-weight: bold;">
+<span style="font-weight: bold;">Bel&eacute;p&eacute;si Adatok M&oacute;dos&iacute;t&aacute;sa</span><br>
+Le&iacute;r&aacute;s: Az &uuml;gyf&eacute;l friss&iacute;ti a
+bel&eacute;p&eacute;si adatait, p&eacute;ld&aacute;ul a jelsz&oacute;t
+vagy a 2FA be&aacute;ll&iacute;t&aacute;sait.<br>
+<br>
+Adat&aacute;raml&aacute;s: A friss&iacute;tett bel&eacute;p&eacute;si
+adatok a ClientRepository-ba ker&uuml;lnek, &eacute;s a rendszer
+biztos&iacute;tja, hogy az &uacute;j adatok alapj&aacute;n
+t&ouml;rt&eacute;njen a hiteles&iacute;t&eacute;s.</p>
 
 
 
 
 
 
-<p>Ha az &aacute;ttekinthetős&eacute;get
-jav&iacute;tja, az alpont tov&aacute;bbi alpontokra
-tagolhat&oacute;.</p>
 
 
 
@@ -2542,166 +2554,13 @@ tagolhat&oacute;.</p>
 
 <h2><a name="_Toc101183578"></a><a name="_Toc101688622"></a><a name="_Toc101704485"></a><a name="_Toc130801957"></a>
 3.4. Oper&aacute;ci&oacute;k azonos&iacute;t&aacute;sa</h2>
-
-
-
-
-
-
-<p>A dinamikus &eacute;s funkcion&aacute;lis modell
-felhaszn&aacute;l&aacute;s&aacute;val az
-oszt&aacute;lydiagramot kieg&eacute;sz&iacute;tj&uuml;k
-az egyes oszt&aacute;lyokhoz tartoz&oacute;
-oper&aacute;ci&oacute;kkal. Ek&ouml;zben &uacute;jabb
-oszt&aacute;lyok, kapcsolatok &eacute;s attrib&uacute;tumok
-sz&uuml;ks&eacute;gess&eacute;g&eacute;re is
-f&eacute;ny der&uuml;lhet.</p>
-
-
-
-
-
-
-<p>Ha sz&uuml;ks&eacute;ges, dokument&aacute;ljuk
-azokat a meggondol&aacute;sokat &eacute;s
-d&ouml;nt&eacute;seket, amelyek az oszt&aacute;lydiagram
-kialak&iacute;t&aacute;s&aacute;hoz vezettek.</p>
-
-
-
-
-
-
-<p>Ha az &aacute;ttekinthetős&eacute;get
-jav&iacute;tja, az alpont tov&aacute;bbi alpontokra
-tagolhat&oacute;.</p>
-
-
-
-
-
-
+<a href="img/operaciok.png">Az oper&aacute;ci&oacute;k megtekint&eacute;s&eacute;hez kattintson a linkre.</a><br>
 <h2><a name="_Toc101704486"></a><a name="_Toc130801958"></a>3.5 Az
 anal&iacute;zis modell oszt&aacute;lydiagramja</h2>
-
-
-
-
-
-
-<p>A dinamikus &eacute;s funkcion&aacute;lis modell
-felhaszn&aacute;l&aacute;s&aacute;val az
-oszt&aacute;lydiagramot kieg&eacute;sz&iacute;tj&uuml;k
-az egyes oszt&aacute;lyokhoz tartoz&oacute;
-oper&aacute;ci&oacute;kkal. Ek&ouml;zben &uacute;jabb
-oszt&aacute;lyok, kapcsolatok &eacute;s attrib&uacute;tumok
-sz&uuml;ks&eacute;gess&eacute;g&eacute;re is
-f&eacute;ny der&uuml;lhet.</p>
-
-
-
-
-
-
-<p>Az &iacute;gy kieg&eacute;sz&iacute;tett
-oszt&aacute;lydiagramot sz&uacute;rjuk ide be. Ha olyan
-m&eacute;retű, hogy kb. f&eacute;l oldalasra
-m&eacute;retezve nem olvashat&oacute;, teljes
-oldalra kell m&eacute;retezni &eacute;s mell&eacute;kletbe
-tenni. Itt akkor csak egy
-hivatkoz&aacute;s &aacute;ll.</p>
-
-
-
-
-
-
-<p>A diagram term&eacute;szetesen tartalmaz olyan
-kapcsolatokat is, amely
-egy m&aacute;sik alrendszer oszt&aacute;ly&aacute;hoz
-mutat. Ilyenkor a k&uuml;lső oszt&aacute;lynak
-is kell szerepelnie az &aacute;br&aacute;n, de a
-le&iacute;r&aacute;sa nem itt, hanem az adott
-alrendszern&eacute;l szerepel.</p>
-
-
-
-
-
-
-<p>Egy p&eacute;lda az alrendszer
-oszt&aacute;lydiagramj&aacute;nak
-form&aacute;j&aacute;ra:</p>
-
-
-
-
-
-
-<p><br>
-
-
-
-
-
-
-<br>
-
-
-
-
-
-
-</p>
-
-
-
-
-
-
-<p><img src="./ANAL%C3%8DZIS+MODELL_files/AnalizisModell_html.jpg" name="K&eacute;p1" align="bottom" border="0" height="322" width="748"></p>
-
-
-
-
-
-
-<p align="center">1. &aacute;bra 1</p>
-
-
-
-
-
-
-<p>&nbsp;</p>
-
-
-
-
-
-
+<a href="img/analizismodell.png">Az anal&iacute;zid modell oszt&aacute;lydiagramja.</a><br>
 <h2><a name="_Toc101183580"></a><a name="_Toc101688624"></a><a name="_Toc101704487"></a><a name="_Toc130801959"></a>
 3.6. Az anal&iacute;zis modell oszt&aacute;lyainak
 list&aacute;ja</h2>
-
-
-
-
-
-
-<p>A előző pontban szereplő oszt&aacute;lydiagram
-oszt&aacute;lyainak le&iacute;r&aacute;sa.
-Minden oszt&aacute;ly le&iacute;r&aacute;s&aacute;t
-kieg&eacute;sz&iacute;tj&uuml;k az
-attrib&uacute;tumokkal &eacute;s az
-oper&aacute;ci&oacute;kkal. &Iacute;gy egy alpont az
-al&aacute;bbi form&aacute;j&uacute; lesz:</p>
-
-
-
-
-
-
 <p>&nbsp;</p>
 
 
@@ -2710,7 +2569,7 @@ al&aacute;bbi form&aacute;j&uacute; lesz:</p>
 
 
 <h3><a name="_Toc101183581"></a><a name="_Toc101688625"></a><a name="_Toc101704488"></a><a name="_Toc130801960"></a>
-3.6.1 Első oszt&aacute;ly neve</h3>
+3.6.1 Person</h3>
 
 
 
@@ -3128,11 +2987,6 @@ műk&ouml;dnie. </p>
 
 
 
-<p>Kit&ouml;lt&eacute;si &uacute;tmutat&oacute;
-(teh&aacute;t nem a form&aacute;tum r&eacute;sze): A
-t&iacute;pus m&eacute;g
-hi&aacute;nyozhat, vagy lehet &aacute;ltal&aacute;nos (pl.
-sz&ouml;veg).</p>
 
 
 
@@ -3496,10 +3350,6 @@ sz&ouml;veg).</p>
 
 
 
-<p>Kit&ouml;lt&eacute;si &uacute;tmutat&oacute;
-(teh&aacute;t nem a form&aacute;tum r&eacute;sze): Az
-argumentum
-lista m&eacute;g hi&aacute;nyozhat, vagy lehet, hogy nem teljes</p>
 
 
 
