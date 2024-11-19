@@ -413,54 +413,33 @@ Felhaszn&aacute;l&oacute;i fel&uuml;let</h1>
 <h1><a name="_Toc101183576"></a><a name="_Toc130874267"></a>3.
 Adatmodellek</h1>
 
-<p>Ez a fejezet term&eacute;szetesen m&oacute;dosul, ha
-nem sz&uuml;ks&eacute;ges adatb&aacute;zis az
-alkalmaz&aacute;shoz. Abban az esetben azt kell le&iacute;rni,
-hogy az adatok
-perzisztenci&aacute;j&aacute;t milyen m&aacute;s
-m&oacute;don oldja meg a rendszer, illetve
-teljesen elmarad, ha a rendszer egy&aacute;ltal&aacute;n nem
-kezel perzisztens
-adatokat.</p>
+<p>Az alkalmazásunkhoz saját adatbázist hozunk létre, ezáltal az adatokkal való dolgozás gördülékenyen fog végbe menni.</p>
 
 <p>&nbsp;</p>
 
 <h2><a name="_Toc130874268"></a>3.1.
 Adatb&aacute;zis kezelő kiv&aacute;laszt&aacute;sa</h2>
 
-<p>Itt kell v&eacute;glegesen eld&ouml;nteni, hogy az
-implement&aacute;ci&oacute; sor&aacute;n milyen
-adatb&aacute;zis kezelő haszn&aacute;lata
-sz&uuml;ks&eacute;ges, &eacute;s milyen
-szabv&aacute;nyos, esetleg
-egyedi technik&aacute;val teremtj&uuml;k meg a kapcsolatot az
-alkalmaz&aacute;s
-funkcion&aacute;lis r&eacute;szei &eacute;s az
-adatb&aacute;zis kezelő k&ouml;z&ouml;tt.</p>
-
-<p>Term&eacute;szetesen lehet az is a
-d&ouml;nt&eacute;s, hogy tetszőleges adatb&aacute;zis
-kezelő haszn&aacute;lat&aacute;ra
-k&eacute;sz&iacute;tj&uuml;k fel a rendszert.</p>
+<p>Az adatbázis kezeléséhez mySQL-t alkalmazunk, és a backend, ami az adatbázissal fog kommunikálni java spring-el lesz megvalósítva. A spring olyan annotációkat tesz elérhetővé, amik használatával az adatbázissal való kommunikáció sokkal egyszerűbbé válik.</p>
 
 <p>&nbsp;</p>
 
 <h2><a name="_Toc130874269"></a>3.2.
 Szemantikai adatmodell</h2>
 
-<p>A szemantikai adatmodell megtervez&eacute;se &eacute;s
-ER diagrammal val&oacute;
-szeml&eacute;ltet&eacute;se ennek a pontnak a feladata.</p>
+<p>5 táblából áll az adatbázisunk, ami nagyjából lefogja az összes funkciót, amit tervezünk az alkalmazásunknak, de ez változhat az implementáció folyamat alatt. Ezek:</p>
+<p>•	Client: Az ügyfél táblában tároljuk el az összes szükséges információt, amellyel betudjuk azonosítani az adott személyt, amivel a többi funkciót ki tudjuk elégíteni.</p>
+<p>•	Employee: A banki dolgozó, akihez tartozik x db ügyfél, neki csak a bejelentkezési adatait és az ügyfeleit tároljuk, a munkáltatás nem a banki felületen történik.</p>
+<p>•	Account: Az ügyfél adott számlája, ami lehet folyószámla, devizaszámla és egyéb befektetési számla.</p>
+<p>•	Card: Az adott bankszámlához több kártya is tartozhat.</p>
+<p>•	Transaction: Az összes utalás, ami a banki felületen történik ebbe a táblába kerül, persze ez nagyon hamar tele töltődhet rekordokkal, de most a feladat egyszerűsége miatt egy táblába visszük be őket.</p>
 
 <p>&nbsp;</p>
 
 <h2><a name="_Toc130874270"></a>3.3
 Rel&aacute;ci&oacute;s adatmodell</h2>
 
-<p>A rel&aacute;ci&oacute;s adatmodellre
-konvert&aacute;l&aacute;s folyamata &eacute;s a
-rel&aacute;ci&oacute;s
-adatmodell le&iacute;r&aacute;sa.</p>
+<p>Az ER modellből készitett relációs adatmodell ábrája.</p>
 
 <p>&nbsp;</p>
 
@@ -468,9 +447,13 @@ adatmodell le&iacute;r&aacute;sa.</p>
 adatb&aacute;zis kezelővel
 kapcsolatot tart&oacute; oszt&aacute;lyok</h2>
 
-<p>A c&iacute;mben eml&iacute;tett oszt&aacute;lyok
-terve. Ha sz&uuml;ks&eacute;ges, oszt&aacute;lydiagram is
-k&eacute;sz&iacute;thető.</p>
+<p>•	<b>DatabaseConnection:</b> Kezeli az adatbázis-kapcsolatot, beleértve a kapcsolat létrehozását, fenntartását és lezárását.</p>
+<p>•	<b>ClientRepository:</b> A Client osztályhoz kapcsolódó adatbázis műveletek végrehajtása.</p>
+<p>•	<b>EmployeeRepository:</b> Az Employee osztályhoz kapcsolódó adatbázis műveletek végrehajtása.</p>
+<p>•	<b>AccountRepository:</b> Az Account osztályhoz kapcsolódó adatbázis műveletek végrehajtása.</p>
+<p>•	<b>TransactionRepository:</b> Az Account osztályhoz kapcsolódó adatbázis műveletek végrehajtása.</p> 
+<p>•	<b>CardRepository:</b> Az Card osztályhoz kapcsolódó adatbázis műveletek végrehajtása.</p>
+
 
 <p>&nbsp;</p>
 
